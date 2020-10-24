@@ -21,7 +21,9 @@
 		hidePreloader();
 	});
 	
-	
+		/* YTPLAYER FOR HEADER VIDEO BACKGROUND */
+        $(".player").mb_YTPlayer();
+
 	/* NAVBAR SCRIPTS */
 	//jQuery to collapse the navbar on scroll
 	$(window).scroll(function() {

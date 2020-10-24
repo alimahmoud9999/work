@@ -375,69 +375,57 @@ p.under-heading {
 /**********************/
 /*     04. HEADER     */
 /**********************/
-.swiper-container-header {
+header {
 	position: relative;
-	overflow: hidden;
 	width: 100%;
-	min-height: 99vh;
-	background: #f0f9fc; /* For browsers that do not support gradients */
-}
-  
-.swiper-container-header .swiper-slide.first {
-	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../images/header-background-1.jpg") center no-repeat;
+	min-height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("../images/header-background.jpg") center no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 
-.swiper-container-header .swiper-slide.second {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("../images/header-background-1.jpg") center no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-.swiper-container-header .swiper-slide.third {
-	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("../images/header-background-1.jpg") center no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-.swiper-container-header .flex-container-wrapper {
-	/* IE fix for vertical alignment in flex box */
+/* IE fix for vertical alignment in flex box */
+header .flex-container-wrapper {
 	display: flex;
 	flex-direction: column;
 	height: 100%; 
 }
 
-.swiper-container-header .header-content {
+header .header-content.video-section {
+	position: relative;
 	z-index: 2;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	min-height: 97vh; 
-	margin-top: 25px;
-	padding: 40px 0px 20px 0px;
+	min-height: 100vh; 
 	text-align: center;
 }
 
-.swiper-container-header .header-content h1 {
+/* Video background section from YTPlayer */
+header .header-content.video-section .pattern-overlay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 90px 0px 20px 0px;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)); /* increase 0.3 to any value under 1 to darken the video background */
+}
+
+header .header-content.video-section h1 {
 	color: #fff;
 }
 
-.swiper-container-header .header-content p.heading-paragraph {
+header .header-content.video-section p.heading-paragraph {
 	margin-top: 10px;
 	margin-right: 10px;
 	margin-left: 10px;
-	font: 300 26px/1.4em "Khula", sans-serif;
 	color: #fff;
+	font: 300 26px/1.4em "Khula", sans-serif;
 }
 
-.swiper-container-header .header-content .button-solid {
+header .header-content.video-section .button-solid {
 	display: block;
 	width: 180px;
 	height: 48px;
@@ -447,7 +435,7 @@ p.under-heading {
 	font: 500 17px/46px "Montserrat", sans-serif;
 }
 
-.swiper-container-header .header-content .fa-angle-down {
+header .header-content.video-section .fa-angle-down {
 	margin-top: 40px;
 	color: #ff631e;
 	-o-transition: all .2s;
@@ -456,23 +444,12 @@ p.under-heading {
     transition: all .2s;
 }
 
-.swiper-container-header .header-content .fa-angle-down:hover {
+header .header-content.video-section .fa-angle-down:hover {
 	-webkit-transform: translate(0px, 7px);
 	-moz-transform: translate(0px, 7px);
 	-o-transform: translate(0px, 7px);
 	-ms-transform: translate(0px, 7px);
 	transform: translate(0px, 7px);
-}
-
-.swiper-container-header .swiper-pagination {
-	bottom: 30px;
-}
-
-.swiper-container-header .swiper-pagination .swiper-pagination-bullet {
-	width: 11px;
-	height: 11px;
-	margin: 0 6px;
-	background: #fff;
 }
 
 
@@ -1284,10 +1261,9 @@ p.under-heading {
 .about .about-image-pane {
 	height: 350px;
 	margin: auto;
-	/* background: linear-gradient(rgba(255, 99, 30, 0.8), rgba(255, 99, 30, 0.8)), url('../images/SmartSelect_20201014-151646_Samsung\ Notes.jpg') center no-repeat; */
+	/* background: linear-gradient(rgba(255, 99, 30, 0.8), rgba(255, 99, 30, 0.8)), url('http://placehold.it/1326x746/3a3a3a/fff/') center no-repeat; */
 	background:url('../images/SmartSelect_20201014-151646_Samsung\ Notes.jpg') center no-repeat;
 	background-size: contain;
-	border-left: 1px solid #eee;
 }
 
 .about .progress {
@@ -1759,11 +1735,11 @@ a:hover.back-to-top {
 		opacity: 1;
 	}
 	
-	.swiper-container-header .header-content {
-		padding-top: 100px;
+	header .header-content.video-section .pattern-overlay {
+		padding: 130px 0px 20px 0px;
 	}
 	
-	.swiper-container-header .header-content p.heading-paragraph {
+	header .header-content p.heading-paragraph {
 		margin-top: 15px;
 		font: 300 30px/1.4em "Khula", sans-serif;
 	}
